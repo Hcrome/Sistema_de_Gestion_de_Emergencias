@@ -45,10 +45,18 @@ public class AlertSender {
      * @param data El string de datos del evento.
      */
     private void persistAlert(String data) {
-        try (PrintWriter out = new PrintWriter(new FileWriter(LOG_FILE, true))) {
+        java.io.File file = new java.io.File(LOG_FILE);
+        java.io.File parentDir = file.getParentFile();
+
+        // Control de errores, asegurar que el directirio existe
+        if (parentDir != null && !parentDir.exists()) {
+            parentDir.mkdir();
+        }
+
+        try (PrintWriter out = new PrintWriter(new FileWriter(file, true))) {
             out.println("REGISTRO DE ALERTA - " + LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
             out.println(data);
-            System.out.println("\n[PERSISTENCIA] Alerta registrada con éxito en el archivo: " + LOG_FILE);
+            System.out.println("\n[PERSISTENCIA] Alerta registrada con éxito.");
         } catch (IOException e) {
             System.err.println("[ERROR] No se pudo escribir en el archivo de log: " + e.getMessage());
         }
