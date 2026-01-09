@@ -137,7 +137,7 @@ public class EmergencyDetector {
      * Valida la gravedad simulando una verificación.
      * return true si la emergencia supera el umbral.
      * (̶t̶h̶r̶o̶w̶s̶ ̶I̶l̶l̶e̶g̶a̶l̶A̶r̶g̶u̶m̶e̶n̶t̶E̶x̶c̶e̶p̶t̶i̶o̶n̶ ̶s̶i̶ ̶l̶a̶ ̶e̶n̶t̶r̶a̶d̶a̶ ̶n̶o̶ ̶e̶s̶ ̶u̶n̶ ̶n̶ú̶m̶e̶r̶o̶.̶)̶
-     * Sustituimos el IllegalArgumentException y añadimos un control de errores propio
+     * Sustituimos el IllegalArgumentException y añadimos un control de excepciones propio
      */
     public boolean validateSeverity() {
         int intentos = 0;
