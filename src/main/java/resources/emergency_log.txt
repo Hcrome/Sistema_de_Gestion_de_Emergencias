@@ -10,3 +10,5 @@ REGISTRO DE ALERTA - 2025-11-26T18:04:35.2546575
 REGISTRO DE ALERTA - 2025-11-26T19:38:20.995385
 | ID: E20251126193820 | Tipo: accidente | Hora: 26/11/2025 19:38:20 | Ubicación: test | Usuario: Juan Pérez, Tel: 600-112-112, Info Médica: Alergia a la Penicilina
 ==================================================
+REGISTRO DE ALERTA - 2026-01-08T18:19:51.1846403
+| ID: E20260108181951 | Tipo: fuego | Hora: 08/01/2026 18:19:51 | Ubicación: mi casa | Usuario: Juan Pérez, Tel: 600-112-112, Info Médica: Alergia a la Penicilina | Prioridad: ALTA 
