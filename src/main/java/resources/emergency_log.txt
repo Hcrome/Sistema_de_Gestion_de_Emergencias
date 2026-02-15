@@ -1,14 +1,18 @@
-==================================================
-REGISTRO DE ALERTA - 2025-11-26T17:34:16.6523687
-| ID: E20251126173416 | Tipo: Sanitaria | Hora: 26/11/2025 17:34:16 | Ubicación: calle juan gomez | Usuario: Juan Pérez, Tel: 600-112-112, Info Médica: Alergia a la Penicilina
-==================================================
-==================================================
-REGISTRO DE ALERTA - 2025-11-26T18:04:35.2546575
-| ID: E20251126180435 | Tipo: Fuego | Hora: 26/11/2025 18:04:35 | Ubicación: mi casa | Usuario: Juan Pérez, Tel: 600-112-112, Info Médica: Alergia a la Penicilina
-==================================================
-==================================================
-REGISTRO DE ALERTA - 2025-11-26T19:38:20.995385
-| ID: E20251126193820 | Tipo: accidente | Hora: 26/11/2025 19:38:20 | Ubicación: test | Usuario: Juan Pérez, Tel: 600-112-112, Info Médica: Alergia a la Penicilina
-==================================================
-REGISTRO DE ALERTA - 2026-01-08T18:19:51.1846403
-| ID: E20260108181951 | Tipo: fuego | Hora: 08/01/2026 18:19:51 | Ubicación: mi casa | Usuario: Juan Pérez, Tel: 600-112-112, Info Médica: Alergia a la Penicilina | Prioridad: ALTA 
+REGISTRO DE ALERTA - 2026-01-09T11:37:26.3219858
+| ID: E20260109113726 | Tipo: Fuego | Hora: 09/01/2026 11:37:26 | Ubicación: mi casa | Usuario: Juan Pérez, Tel: 600-112-112, Info Médica: Alergia a la Penicilina | Prioridad: ALTA 
+REGISTRO DE ALERTA - 2026-02-15T11:28:15.764304
+| ID: E20260215112815 | Tipo: Sanitaria | Hora: 15/02/2026 11:28:15 | Ubicación: mi casa | Usuario: Juan Pérez, Tel: 600-112-112, Info Médica: Alergia a la Penicilina | Prioridad: MEDIA 
+REGISTRO DE ALERTA - 2026-02-15T11:41:19.0952238
+| ID: E20260215114119 | Tipo: fuego | Hora: 15/02/2026 11:41:19 | Ubicación: mi casa | Usuario: Juan Pérez, Tel: 600-112-112, Info Médica: Alergia a la Penicilina | Prioridad: ALTA 
+REGISTRO DE ALERTA - 2026-02-15T12:00:14.7475394
+| ID: E20260215120014 | Tipo: asd | Hora: 15/02/2026 12:00:14 | Ubicación: asd | Usuario: Juan Pérez, Tel: 600-112-112, Info Médica: Alergia a la Penicilina | Prioridad: BAJA 
+REGISTRO DE ALERTA - 2026-02-15T12:04:03.2115649
+| ID: E20260215120403 | Tipo: fuego | Hora: 15/02/2026 12:04:03 | Ubicación: asd | Usuario: Juan Pérez, Tel: 600-112-112, Info Médica: Alergia a la Penicilina | Prioridad: ALTA 
+REGISTRO DE ALERTA - 2026-02-15T12:12:23.8143713
+| ID: E20260215121223 | Tipo: fuego | Hora: 15/02/2026 12:12:23 | Ubicación: mi casa | Usuario: Juan Pérez, Tel: 600-112-112, Info Médica: Alergia a la Penicilina | Prioridad: ALTA 
+REGISTRO DE ALERTA - 2026-02-15T12:12:55.7442431
+| ID: E20260215121255 | Tipo: fuego | Hora: 15/02/2026 12:12:55 | Ubicación: mi asa | Usuario: Juan Pérez, Tel: 600-112-112, Info Médica: Alergia a la Penicilina | Prioridad: ALTA 
+REGISTRO DE ALERTA - 2026-02-15T12:25:24.7750197
+| ID: E20260215122524 | Tipo: fuego | Hora: 15/02/2026 12:25:24 | Ubicación: mi casa | Usuario: Juan Pérez, Tel: 600-112-112, Info Médica: Alergia a la Penicilina | Prioridad: ALTA 
+REGISTRO DE ALERTA - 2026-02-15T12:26:17.7364109
+| ID: E20260215122617 | Tipo: fuego | Hora: 15/02/2026 12:26:17 | Ubicación: mi casa | Usuario: Juan Pérez, Tel: 600-112-112, Info Médica: Alergia a la Penicilina | Prioridad: ALTA 
