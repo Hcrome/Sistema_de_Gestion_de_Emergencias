@@ -1,0 +1,3 @@
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260302175440 | Tipo: Fuego | Hora: 02/03/2026 17:54:40 | Ubicación: Elche | Usuario: Sergio Pascual, Tel: 600-112-112, Info Médica: Pescado
+------------------------------

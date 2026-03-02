@@ -10,3 +10,5 @@ REGISTRO DE ALERTA - 2025-11-26T18:04:35.2546575
 REGISTRO DE ALERTA - 2025-11-26T19:38:20.995385
 | ID: E20251126193820 | Tipo: accidente | Hora: 26/11/2025 19:38:20 | Ubicación: test | Usuario: Juan Pérez, Tel: 600-112-112, Info Médica: Alergia a la Penicilina
 ==================================================
+REGISTRO DE ALERTA - 2026-03-02T17:54:40.3396382
+| ID: E20260302175440 | Tipo: Fuego | Hora: 02/03/2026 17:54:40 | Ubicación: Elche | Usuario: Sergio Pascual, Tel: 600-112-112, Info Médica: Pescado
