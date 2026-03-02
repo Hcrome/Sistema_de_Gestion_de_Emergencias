@@ -136,19 +136,25 @@ public class EmergencyDetector {
     /**
      * Valida la gravedad simulando una verificación.
      * return true si la emergencia supera el umbral.
-     * throws IllegalArgumentException si la entrada no es un número.
+     * (̶t̶h̶r̶o̶w̶s̶ ̶I̶l̶l̶e̶g̶a̶l̶A̶r̶g̶u̶m̶e̶n̶t̶E̶x̶c̶e̶p̶t̶i̶o̶n̶ ̶s̶i̶ ̶l̶a̶ ̶e̶n̶t̶r̶a̶d̶a̶ ̶n̶o̶ ̶e̶s̶ ̶u̶n̶ ̶n̶ú̶m̶e̶r̶o̶.̶)̶
+     * Sustituimos el IllegalArgumentException y añadimos un control de excepciones propio
      */
-    public boolean validateSeverity() throws IllegalArgumentException {
-        System.out.printf("Simulación de gravedad: Introduce un valor de impacto (mínimo %d para activar): ", UMBRAL_ACTIVACION);
-        String input = scanner.nextLine();
-        int impacto;
-
-        try {
-            impacto = Integer.parseInt(input);
-        } catch (NumberFormatException e) {
-            throw new IllegalArgumentException("El valor de impacto debe ser un número entero.");
+    public boolean validateSeverity() {
+        int intentos = 0;
+        while (intentos < 3) {
+            System.out.printf("Simulación de gravedad: Introduce un valor de impacto (mínimo %d para activar): ", UMBRAL_ACTIVACION);
+            String input = scanner.nextLine();
+            try {
+                int impacto = Integer.parseInt(input);
+                return impacto >= UMBRAL_ACTIVACION;
+            } catch (NumberFormatException e) {
+                intentos++;
+                System.out.println("Entrada inválida. Intente de nuevo (" + (3 - intentos) + " intentos restantes). ");
+            }
         }
+        System.err.println("Demasiados intentos fallidos. Por seguridad, se cancela la validación"); //IllegalArgumentException sustituido por system.err.println
+        return false; //integridad de sistema continua, cancela evento dudoso.
 
-        return impacto >= UMBRAL_ACTIVACION;
+
     }
 }
