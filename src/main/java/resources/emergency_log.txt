@@ -33,3 +33,5 @@ REGISTRO DE ALERTA - 2026-02-15T12:25:24.7750197
 REGISTRO DE ALERTA - 2026-02-15T12:26:17.7364109
 | ID: E20260215122617 | Tipo: fuego | Hora: 15/02/2026 12:26:17 | Ubicación: mi casa | Usuario: Juan Pérez, Tel: 600-112-112, Info Médica: Alergia a la Penicilina | Prioridad: ALTA 
 
+REGISTRO DE ALERTA - 2026-03-12T17:03:07.9587893
+| ID: E20260312170307 | Tipo: Sanitaria | Hora: 12/03/2026 17:03:07 | Ubicación: Calle los zapateros | Usuario: Adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: MEDIA 

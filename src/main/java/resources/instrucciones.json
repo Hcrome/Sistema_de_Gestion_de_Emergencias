@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "titulo": "Maniobra de Heimlich",
+    "descripcion": "Colóquese detrás de la persona. Rodee la cintura con sus brazos. Haga un puño y presione hacia adentro y arriba."
+  },
+  {
+    "id": 2,
+    "titulo": "RCP Básica",
+    "descripcion": "Realice 30 compresiones torácicas fuertes y rápidas en el centro del pecho, seguidas de 2 insuflaciones."
+  },
+  {
+    "id": 3,
+    "titulo": "Accidente de Moto",
+    "descripcion": "NO retire el casco. Inmovilice el cuello y espere a los servicios profesionales."
+  }
+]
