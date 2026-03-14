@@ -51,5 +51,14 @@ public class HospitalLoader {
         return this.listaHospitales;
     }
 
+    // este metodo encuntra el hospital mas cercano.
+    public Hospital encontrarMasCercano(double miLat, double miLon) {
+        return listaHospitales.stream()
+                .filter(Hospital::tieneCoordenadasValidas) // <-- EL FILTRO CLAVE
+                .min((h1, h2) -> Double.compare(
+                        h1.calcularDistanciaA(miLat, miLon),
+                        h2.calcularDistanciaA(miLat, miLon)))
+                .orElse(null);
+    }
 
 }

@@ -1,6 +1,8 @@
 package main.java.com.emergencias.detector;
 
 import main.java.com.emergencias.model.EmergencyEvent;
+import main.java.com.emergencias.model.Hospital;
+import main.java.com.emergencias.model.HospitalLoader;
 import main.java.com.emergencias.model.UserData;
 import java.util.Scanner;
 import java.util.concurrent.Executors;
@@ -113,21 +115,61 @@ public class EmergencyDetector {
     // metodo para registro de tipo de emergencia y gravedad
 
     private EmergencyEvent gatherEventData(UserData userData) {
-        System.out.print("Tipo de Emergencia Ej: Sanitaria,Accidente,Fuego,etc...: ");
+        System.out.println("\n--- REGISTRO DE UBICACIÓN ---");
+        System.out.println("[1] Introducir Dirección Manual");
+        System.out.println("[2] Usar Coordenadas GPS (Buscar Hospital más cercano)");
+        System.out.print("Seleccione una opción: ");
+
+        String opc = scanner.nextLine();
+        String ubicacionFinal = "";
+
+        if (opc.equals("2")) {
+            try {
+                System.out.print("Introduce tu Latitud (ej. 38.0): ");
+                double lat = Double.parseDouble(scanner.nextLine());
+                System.out.print("Introduce tu Longitud (ej. -1.0): ");
+                double lon = Double.parseDouble(scanner.nextLine());
+
+                HospitalLoader loader = new HospitalLoader();
+                loader.cargarDatos();
+
+                // Buscamos el hospital más cercano
+                Hospital cercano = loader.encontrarMasCercano(lat, lon);
+
+                if (cercano != null) {
+                    double dist = cercano.calcularDistanciaA(lat, lon);
+                    ubicacionFinal = String.format("Cerca de: %s (%s) a %.2f km",
+                            cercano.getNombre(), cercano.getMunicipio(), dist);
+                    System.out.println("\n[GPS] Ubicación detectada con éxito.");
+                } else {
+                    System.out.println("[!] No se encontraron hospitales con coordenadas válidas.");
+                    ubicacionFinal = "Coordenadas: " + lat + ", " + lon;
+                }
+            } catch (NumberFormatException e) {
+                System.err.println("[Error] Formato de coordenadas inválido. Cambiando a manual...");
+                System.out.print("Introduzca dirección manualmente: ");
+                ubicacionFinal = scanner.nextLine();
+            }
+        } else {
+            System.out.print("Introduzca la dirección de la emergencia: ");
+            ubicacionFinal = scanner.nextLine();
+        }
+
+        // Pedimos el tipo de emergencia (Solo UNA vez)
+        System.out.print("Tipo de Emergencia (Sanitaria, Accidente, Fuego...): ");
         String tipo = scanner.nextLine();
 
-        System.out.print("Ubicación simulada (Lat,Long o Dirección): ");
-        String ubicacion = scanner.nextLine();
-
         try {
+            // Validamos la gravedad antes de crear el evento
             if (validateSeverity()) {
-                System.out.println("Validación de gravedad exitosa. Creando evento de emergencia.");
-                return new EmergencyEvent(tipo, ubicacion, userData);
+                System.out.println("Validación de gravedad exitosa. Creando evento.");
+                // IMPORTANTE: Usamos ubicacionFinal que es la que tiene los datos del GPS o Manual
+                return new EmergencyEvent(tipo, ubicacionFinal, userData);
             } else {
                 System.out.println("Validación de gravedad fallida. Falso positivo evitado.");
                 return null;
             }
-        } catch (IllegalArgumentException e) {
+        } catch (Exception e) {
             System.err.println("Error en la validación: " + e.getMessage());
             return null;
         }

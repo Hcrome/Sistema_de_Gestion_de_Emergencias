@@ -35,3 +35,15 @@ REGISTRO DE ALERTA - 2026-02-15T12:26:17.7364109
 
 REGISTRO DE ALERTA - 2026-03-12T17:03:07.9587893
 | ID: E20260312170307 | Tipo: Sanitaria | Hora: 12/03/2026 17:03:07 | Ubicación: Calle los zapateros | Usuario: Adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: MEDIA 
+REGISTRO DE ALERTA - 2026-03-13T12:02:03.8325351
+| ID: E20260313120203 | Tipo: accidednte | Hora: 13/03/2026 12:02:03 | Ubicación: Coordenadas: -1.8, 38.0 | Usuario: Adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: BAJA 
+REGISTRO DE ALERTA - 2026-03-13T12:15:13.9455715
+| ID: E20260313121513 | Tipo: sanitaria | Hora: 13/03/2026 12:15:13 | Ubicación: Cerca de: null (null) a 5938,94 km | Usuario: adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: MEDIA 
+REGISTRO DE ALERTA - 2026-03-13T12:35:32.8100635
+| ID: E20260313123532 | Tipo: fuego | Hora: 13/03/2026 12:35:32 | Ubicación: Cerca de: CENTRO DE SALUD DE SAN PEDRO DEL PINATAR (San Pedro del Pinatar) a 5938,94 km | Usuario: adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: ALTA 
+REGISTRO DE ALERTA - 2026-03-14T17:49:54.3120766
+| ID: E20260314174954 | Tipo: accidendte | Hora: 14/03/2026 17:49:54 | Ubicación: Cerca de: CENTRO DE SALUD DE SAN PEDRO DEL PINATAR (San Pedro del Pinatar) a 5944,88 km | Usuario: adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: BAJA 
+REGISTRO DE ALERTA - 2026-03-14T17:54:36.9508343
+| ID: E20260314175436 | Tipo: sanitaria | Hora: 14/03/2026 17:54:36 | Ubicación: Cerca de: CENTRO DE SALUD (Cehegín) a 0,00 km | Usuario: adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: MEDIA 
+REGISTRO DE ALERTA - 2026-03-14T18:03:27.1921501
+| ID: E20260314180327 | Tipo: fuego | Hora: 14/03/2026 18:03:27 | Ubicación: Cerca de: CENTRO DE SALUD DE SAN PEDRO DEL PINATAR (San Pedro del Pinatar) a 10,06 km | Usuario: adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: ALTA 
