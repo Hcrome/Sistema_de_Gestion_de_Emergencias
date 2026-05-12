@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<VBox prefHeight="698.0" prefWidth="458.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.com.emergencias.controller.MainMenuController">
+   <children>
+      <HBox prefHeight="121.0" prefWidth="458.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="126.0" prefWidth="479.0" text="Emergencias">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="121.0" prefWidth="458.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="126.0" prefWidth="479.0" text="Elige la opcion que necesites">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="200.0" prefWidth="458.0">
+         <children>
+            <Button fx:id="inicEmergencia" mnemonicParsing="false" onAction="#abrirEmergencia" prefHeight="170.0" prefWidth="276.0" style="-fx-background-color: red;" text="Iniciar llamada de emergencia">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="200.0" prefWidth="458.0">
+         <children>
+            <Button fx:id="InicInstrucciones" mnemonicParsing="false" onAction="#abrirInstrucciones" prefHeight="170.0" prefWidth="276.0" style="-fx-background-color: green;" text="Acceder a instrucciones de emergencia">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox prefHeight="56.0" prefWidth="458.0" />
+   </children>
+</VBox>

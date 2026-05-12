@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<VBox prefHeight="698.0" prefWidth="458.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="121.0" prefWidth="458.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="126.0" prefWidth="479.0" text="Emergencias">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="121.0" prefWidth="458.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="126.0" prefWidth="479.0" text="Introduce los datos del usuario">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="63.0" prefWidth="458.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="132.0" prefWidth="126.0" text="Nombre y apellidos" />
+            <TextField fx:id="txtNombre" prefHeight="25.0" prefWidth="307.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="58.0" prefWidth="458.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="132.0" prefWidth="126.0" text="Alergias" />
+            <TextField fx:id="txtAlergias" alignment="CENTER" prefHeight="25.0" prefWidth="309.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="ubicacion" alignment="CENTER" prefHeight="63.0" prefWidth="458.0">
+         <children>
+            <SplitMenuButton fx:id="splitUbicacion" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" text="Ubicacion">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Direccion fisica" />
+                <MenuItem mnemonicParsing="false" text="Coordenadas" />
+              </items>
+            </SplitMenuButton>
+            <StackPane prefHeight="56.0" prefWidth="329.0">
+               <children>
+                  <TextField fx:id="txtFisico" alignment="CENTER" prefHeight="25.0" prefWidth="306.0" promptText="(ciudad, calle, numero...)" />
+                  <HBox fx:id="panelCoordenadas" alignment="CENTER" prefHeight="52.0" prefWidth="329.0">
+                     <children>
+                        <TextField fx:id="txtLatitud" alignment="CENTER" prefHeight="25.0" prefWidth="164.0" promptText="latitud" />
+                        <TextField fx:id="txtLongitud" alignment="CENTER" prefHeight="25.0" prefWidth="162.0" promptText="longitud" />
+                     </children>
+                  </HBox>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="66.0" prefWidth="458.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="24.0" prefWidth="134.0" text="Tipo emergencia" />
+            <TextField fx:id="txtTipo" prefHeight="25.0" prefWidth="338.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="79.0" prefWidth="458.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="128.0" text="Gravedad Min. 3 " />
+            <Slider fx:id="sliderGravedad" blockIncrement="1.0" majorTickUnit="10.0" max="10.0" minorTickCount="1" prefHeight="14.0" prefWidth="301.0" showTickLabels="true" showTickMarks="true" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btnEnviar" mnemonicParsing="false" prefHeight="82.0" prefWidth="233.0" text="Enviar Emergencia" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

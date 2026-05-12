@@ -1,72 +1,83 @@
 package main.java.com.emergencias.main;
-import main.java.com.emergencias.controller.InstructionManager;
-import main.java.com.emergencias.model.HospitalLoader;
-import main.java.com.emergencias.model.Hospital;
-import main.java.com.emergencias.controller.EmergencyManager;
 
-import java.util.Scanner;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+import main.java.com.emergencias.controller.UserDataController;
+import main.java.com.emergencias.controller.EmergencyListController;
 
-public class Main {
-    // Bajamos el umbral a 3 para que sea más fácil que salte la alerta en tu prueba
-    private static final int UMBRAL_REQUERIDO = 3; 
-    private static final String DESTINO_SERVICIO = "112 Emergencias Sanitarias";
+import java.io.File;
+import java.net.URL;
+
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) {
+        try {
+            // 1. Carga del Menú Principal (Main_menu.fxml)
+            File fileMenu = new File("src/main/resources/Main_menu.fxml");
+            URL urlMenu = fileMenu.toURI().toURL();
+            FXMLLoader loaderMenu = new FXMLLoader(urlMenu);
+            Parent root = loaderMenu.load();
+
+            // --- BOTÓN 1: INICIAR REPORTE (Abre el formulario) ---
+            Button btnEmergencia = (Button) root.lookup("#inicEmergencia");
+            if (btnEmergencia != null) {
+                btnEmergencia.setOnAction(e -> {
+                    try {
+                        File fileForm = new File("src/main/resources/user_data_form.fxml");
+                        URL urlForm = fileForm.toURI().toURL();
+                        FXMLLoader loaderForm = new FXMLLoader(urlForm);
+                        Parent formRoot = loaderForm.load();
+
+                        // Iniciamos controlador pasándole el stage para futuros cambios
+                        new UserDataController(formRoot, primaryStage);
+                        primaryStage.getScene().setRoot(formRoot);
+
+                    } catch (Exception ex) {
+                        System.err.println("Error al cargar formulario: " + ex.getMessage());
+                    }
+                });
+            }
+
+            // --- BOTÓN 2: CONSULTAR INSTRUCCIONES (Abre la lista del JSON) ---
+            Button btnInstrucciones = (Button) root.lookup("#InicInstrucciones");
+            if (btnInstrucciones != null) {
+                btnInstrucciones.setOnAction(e -> {
+                    try {
+                        File fileList = new File("src/main/resources/emergency_list.fxml");
+                        URL urlList = fileList.toURI().toURL();
+                        FXMLLoader loaderList = new FXMLLoader(urlList);
+                        Parent listRoot = loaderList.load();
+
+                        // Iniciamos controlador de la lista (Jackson leerá el JSON aquí)
+                        new EmergencyListController(listRoot, primaryStage);
+                        primaryStage.getScene().setRoot(listRoot);
+
+                    } catch (Exception ex) {
+                        System.err.println("Error al cargar instrucciones: " + ex.getMessage());
+                    }
+                });
+            }
+
+            // 2. Configuración de la Ventana Principal
+            Scene scene = new Scene(root);
+            primaryStage.setTitle("SISTEMA DE EMERGENCIAS V3 - JavaFX");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+
+            System.out.println("DEBUG: Aplicación iniciada y botones vinculados.");
+
+        } catch (Exception e) {
+            System.err.println("ERROR CRÍTICO EN START:");
+            e.printStackTrace();
+        }
+    }
 
     public static void main(String[] args) {
-        // Se modifica la clase MAIN para introducir la nueva funcionalidad
-        Scanner sc = new Scanner(System.in);
-        System.out.println("============================================");
-        System.out.println("   SISTEMA DE DETECCIÓN DE EMERGENCIAS V3  ");
-        System.out.println("============================================\n");
-        System.out.println("1. Iniciar Reporte de Emergencia");
-        System.out.println("2. Consultar Guía de Instrucciones");
-        System.out.print("Opción: ");
-
-        int principal = sc.nextInt();
-
-        // Un if else para dar opciones al usuario de elegir que desea hacer
-        if (principal == 2) {
-            // eligiendo 2 pasara al metod de instrucciones de emergencia
-            InstructionManager insManager = new InstructionManager();
-            insManager.mostrarMenuInstrucciones();
-        } else {
-            EmergencyManager manager = new EmergencyManager(UMBRAL_REQUERIDO, DESTINO_SERVICIO);
-
-            System.out.println("\nIniciando monitoreo de sensores...");
-            manager.startSystem();
-
-            System.out.println("\n============================================");
-            System.out.println("           SIMULACIÓN FINALIZADA            ");
-            System.out.println("============================================");
-            System.out.println("Simulación Finalizada.");
-
-            // METODO DE LA CLASE HOSPITALLOADER QUE VERIFICA QUE FUNCIONA (Modificar al gusto del nuevo metodo)
-            HospitalLoader loader = new HospitalLoader();
-            loader.cargarDatos();
-            /** esto es una prueba de que los datos son recogidos correctamente, pasa los datos JSON a texto plano e imprime por consola
-
-             try {
-             // 1. Leer el archivo como texto plano (puro String)
-             String ruta = "src/main/java/resources/hospital_list.json";
-             String contenido = new String(java.nio.file.Files.readAllBytes(java.nio.file.Paths.get(ruta)));
-
-             // 2. Imprimir el texto tal cual para ver si lo encuentra
-             System.out.println("--- CONTENIDO CRUDO DEL JSON ---");
-             System.out.println(contenido);
-             System.out.println("--------------------------------");
-
-             // 3. Si quieres que se vea un poco "ordenado" sin crear clases:
-             com.fasterxml.jackson.databind.ObjectMapper mapper = new com.fasterxml.jackson.databind.ObjectMapper();
-             Object jsonLindo = mapper.readValue(contenido, Object.class);
-             String formateado = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonLindo);
-
-             System.out.println("--- JSON FORMATEADO ---");
-             System.out.println(formateado);
-
-             } catch (Exception e) {
-             System.err.println("Error al leer el archivo: " + e.getMessage());
-             e.printStackTrace();
-             }
-             **/
-        }
+        launch(args);
     }
 }

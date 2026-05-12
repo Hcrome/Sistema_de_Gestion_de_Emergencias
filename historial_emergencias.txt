@@ -22,3 +22,30 @@
 --- REGISTRO DE EMERGENCIA ---
 | ID: E20260314180327 | Tipo: fuego | Hora: 14/03/2026 18:03:27 | Ubicación: Cerca de: CENTRO DE SALUD DE SAN PEDRO DEL PINATAR (San Pedro del Pinatar) a 10,06 km | Usuario: adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: ALTA 
 ------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260329181019 | Tipo: sanitara | Hora: 29/03/2026 18:10:19 | Ubicación: mi casa | Usuario: adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: BAJA 
+------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260329182451 | Tipo: sanitaria | Hora: 29/03/2026 18:24:51 | Ubicación: Cerca de: Centro Médico de Torre-Pacheco (Privado) (Torre Pacheco) a 10519,77 km | Usuario: adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: MEDIA 
+------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260329185037 | Tipo: as | Hora: 29/03/2026 18:50:37 | Ubicación: mi casa | Usuario: as, Tel: 600-112-112, Info Médica: as | Prioridad: BAJA 
+------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260329202444 | Tipo: fuego | Hora: 29/03/2026 20:24:44 | Ubicación: mi casa | Usuario: adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: ALTA 
+------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260330180300 | Tipo: asd | Hora: 30/03/2026 18:03:00 | Ubicación:  | Usuario: asd, Tel: 600-112-112, Info Médica: asd | Prioridad: BAJA 
+------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260330181223 | Tipo: fuego | Hora: 30/03/2026 18:12:23 | Ubicación:  | Usuario: adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: ALTA 
+------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260330181718 | Tipo: Sanitaria | Hora: 30/03/2026 18:17:18 | Ubicación: Calle Falsa | Usuario: adrian, Tel: 600-112-112, Info Médica: Alergias... | Prioridad: MEDIA 
+------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260330191210 | Tipo: fuego | Hora: 30/03/2026 19:12:10 | Ubicación:  | Usuario: Adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: ALTA 
+------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260330191618 | Tipo: fuengo | Hora: 30/03/2026 19:16:18 | Ubicación:  | Usuario: adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: BAJA 
+------------------------------
