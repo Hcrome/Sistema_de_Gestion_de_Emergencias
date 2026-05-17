@@ -71,20 +71,20 @@ Main
                carga user_data_form.fxml
                     UserDataController.initialize()
                          gestiona SplitMenuButton (físico - coordenadas GPS)
-                         [Botón: Enviar] → enviarEmergencia()
+                         [Botón: Enviar] - enviarEmergencia()
                               recoge campos del formulario
                               EmergencyManager.startSystem()
                                     EmergencyDetector.processFromGUI()
                                         [Modo GPS]
                                             HospitalLoader.cargarDatos()
-                                                Jackson → List<Hospital>
+                                                Jackson - List<Hospital>
                                                     encontrarMasCercano()
                                                         Hospital.calcularDistanciaA()
                                                              Fórmula Haversine
                               
                                         [Si gravedad ≥ umbral]
                                              new EmergencyEvent(...)
-                                                   asignarPrioridad() → ALTA / MEDIA / BAJA
+                                                   asignarPrioridad() - ALTA / MEDIA / BAJA
                                                        devuelve evento a EmergencyManager
                                                             AlertSender.sendAlert()
                                                                 persiste en emergency_log.txt
