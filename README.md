@@ -48,7 +48,8 @@ void abrirEmergencia(ActionEvent event) {
 
 Toda la lógica de cambio de escena está centralizada en un único método privado `cambiarEscena()`, que obtiene el `Stage` actual a través del evento y reemplaza la escena completa.
 
-**Nota:** existe una inconsistencia entre este controlador y `Main.java`: el archivo `Main` vincula los botones manualmente con `root.lookup()`, ignorando el controlador FXML. En la práctica es `Main.java` el que controla la navegación real.
+**Nota:** debido a la tansicion de aplicacion por consola a aplicacion de interfaz existe una inconsistencia entre este controlador y `Main.java`: el archivo `Main` vincula
+los botones manualmente con `root.lookup()`, ignorando el controlador FXML. En la práctica es `Main.java` el que controla la navegación real.
 
 ---
 
