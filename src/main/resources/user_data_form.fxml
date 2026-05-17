@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Label?>
 
-<VBox prefHeight="698.0" prefWidth="458.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:controller="main.java.com.emergencias.controller.UserDataController" prefHeight="698.0" prefWidth="458.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox prefHeight="121.0" prefWidth="458.0">
          <children>
@@ -43,8 +43,8 @@
          <children>
             <SplitMenuButton fx:id="splitUbicacion" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" text="Ubicacion">
               <items>
-                <MenuItem mnemonicParsing="false" text="Direccion fisica" />
-                <MenuItem mnemonicParsing="false" text="Coordenadas" />
+                  <MenuItem fx:id="menuFisico"       text="Direccion fisica" />
+                  <MenuItem fx:id="menuCoordenadas"  text="Coordenadas" />
               </items>
             </SplitMenuButton>
             <StackPane prefHeight="56.0" prefWidth="329.0">
@@ -74,7 +74,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button fx:id="btnEnviar" mnemonicParsing="false" prefHeight="82.0" prefWidth="233.0" text="Enviar Emergencia" />
+            <Button fx:id="btnEnviar" mnemonicParsing="false" prefHeight="82.0" prefWidth="233.0" text="Enviar Emergencia" onAction="#enviarEmergencia" />
          </children>
       </HBox>
    </children>

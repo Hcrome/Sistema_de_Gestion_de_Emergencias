@@ -13,8 +13,9 @@ public class EmergencyEvent {
     private final LocalDateTime timestamp;
     private final UserData datosUsuario;
     private final String prioridad;
+    private final String modoUbicacion;
 
-    public EmergencyEvent(String tipoEmergencia, String ubicacion, UserData datosUsuario) {
+    public EmergencyEvent(String tipoEmergencia, String ubicacion, UserData datosUsuario, String modoUbicacion) {
         // Generar un ID simple basado en el tiempo
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
         this.id = "E" + LocalDateTime.now().format(formatter);
@@ -23,7 +24,10 @@ public class EmergencyEvent {
         this.timestamp = LocalDateTime.now();
         this.datosUsuario = datosUsuario;
         this.prioridad = asignarPrioridad(tipoEmergencia);
+        this.modoUbicacion  = modoUbicacion;
     }
+
+    public String getModoUbicacion() { return modoUbicacion; }
 
     // feature de emergency priority
     private String asignarPrioridad(String tipo) {
@@ -40,6 +44,7 @@ public class EmergencyEvent {
     public String getUbicacion() { return ubicacion; }
     public LocalDateTime getTimestamp() { return timestamp; }
     public UserData getDatosUsuario() { return datosUsuario; }
+    public String getPrioridad() { return prioridad; }
 
     @Override
     public String toString() {

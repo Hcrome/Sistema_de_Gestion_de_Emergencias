@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Label?>
 
-<VBox prefHeight="698.0" prefWidth="458.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:controller="main.java.com.emergencias.controller.EmergencyLogController" prefHeight="698.0" prefWidth="458.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox prefHeight="121.0" prefWidth="458.0">
          <children>

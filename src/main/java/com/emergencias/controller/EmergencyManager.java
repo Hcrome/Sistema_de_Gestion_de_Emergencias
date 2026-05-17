@@ -18,18 +18,15 @@ public class EmergencyManager {
         this.usuarioSimulado = new UserData(nombre, "600-112-112", obs);
     }
 
-    public void startSystem(String tipo, String modoUbic, String dir, String lat, String lon, int grav) {
-        try {
-            // Llamamos al nuevo método del detector sin Scanners
-            EmergencyEvent evento = detector.processFromGUI(usuarioSimulado, tipo, modoUbic, dir, lat, lon, grav);
+    public EmergencyEvent startSystem(String tipo, String modoUbic, String dir,
+                                      String lat, String lon, int grav) {
+        EmergencyEvent evento = detector.processFromGUI(usuarioSimulado, tipo, modoUbic, dir, lat, lon, grav);
 
-            if (evento != null) {
-                sender.sendAlert(evento);
-                guardarEnHistorial(evento);
-            }
-        } catch (Exception e) {
-            System.err.println("Error: " + e.getMessage());
+        if (evento != null) {
+            sender.sendAlert(evento);
+            guardarEnHistorial(evento);
         }
+        return evento; // ← devuelve el evento (o null si fue falso positivo)
     }
 
     private void guardarEnHistorial(EmergencyEvent evento) {

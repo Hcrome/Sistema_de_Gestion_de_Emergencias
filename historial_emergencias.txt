@@ -49,3 +49,30 @@
 --- REGISTRO DE EMERGENCIA ---
 | ID: E20260330191618 | Tipo: fuengo | Hora: 30/03/2026 19:16:18 | Ubicación:  | Usuario: adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: BAJA 
 ------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260517122002 | Tipo: sanitaria | Hora: 17/05/2026 12:20:02 | Ubicación:  | Usuario: asd, Tel: 600-112-112, Info Médica: asd | Prioridad: MEDIA 
+------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260517165645 | Tipo: asd | Hora: 17/05/2026 16:56:45 | Ubicación: asd | Usuario: asd, Tel: 600-112-112, Info Médica: asd | Prioridad: BAJA 
+------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260517170528 | Tipo: asd | Hora: 17/05/2026 17:05:28 | Ubicación: asd | Usuario: asd, Tel: 600-112-112, Info Médica: asd | Prioridad: BAJA 
+------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260517170720 | Tipo: sanitaria | Hora: 17/05/2026 17:07:20 | Ubicación: calle mi casa | Usuario: adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: MEDIA 
+------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260517170754 | Tipo: fuego | Hora: 17/05/2026 17:07:54 | Ubicación: Coordenadas: 18.0, 7.8 | Usuario: adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: ALTA 
+------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260517172341 | Tipo: accidente | Hora: 17/05/2026 17:23:41 | Ubicación: mi casa | Usuario: adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: ALTA 
+------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260517172415 | Tipo: accidente | Hora: 17/05/2026 17:24:15 | Ubicación: Coordenadas: 18.9, 7.9 | Usuario: adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: ALTA 
+------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260517173550 | Tipo: sanitaria | Hora: 17/05/2026 17:35:50 | Ubicación: Coordenadas: 38.5, -0.5 | Usuario: adrian, Tel: 600-112-112, Info Médica: nada | Prioridad: MEDIA 
+------------------------------
+--- REGISTRO DE EMERGENCIA ---
+| ID: E20260517173741 | Tipo: accidente | Hora: 17/05/2026 17:37:41 | Ubicación: Cerca de: CENTRO DE SALUD DE SAN PEDRO DEL PINATAR (San Pedro del Pinatar) a 5865,41 km | Usuario: asd, Tel: 600-112-112, Info Médica: asd | Prioridad: ALTA 
+------------------------------

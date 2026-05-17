@@ -14,7 +14,7 @@ import java.util.List;
 public class HospitalLoader {
 
     // La ruta queda fija aquí dentro
-    private static final String RUTA_JSON = "src/main/java/resources/Hospital_list.json";
+    private static final String RUTA_JSON = "src/main/resources/Hospital_list.json";
     private List<Hospital> listaHospitales;
 
     public HospitalLoader() {

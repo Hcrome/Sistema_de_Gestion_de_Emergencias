@@ -20,10 +20,12 @@ public class EmergencyDetector {
         String ubicacionFinal = "";
 
         // Lógica de Ubicación (Copiada de tu gatherEventData)
-        if ("2".equals(modoUbicacion)) { // Modo GPS
+        if ("2".equals(modoUbicacion)) {
+            System.out.println("DEBUG lat: '" + latStr + "' lon: '" + lonStr + "'");
             try {
                 double lat = Double.parseDouble(latStr);
                 double lon = Double.parseDouble(lonStr);
+                System.out.println("DEBUG parsed lat: " + lat + " lon: " + lon);
 
                 HospitalLoader loader = new HospitalLoader();
                 loader.cargarDatos();
@@ -44,11 +46,10 @@ public class EmergencyDetector {
         }
 
         // Validación de gravedad
+        // Al final de processFromGUI(), cambia el return:
         if (gravedad >= UMBRAL_ACTIVACION) {
-            System.out.println("Validación exitosa. Creando evento.");
-            return new EmergencyEvent(tipo, ubicacionFinal, userData);
+            return new EmergencyEvent(tipo, ubicacionFinal, userData, modoUbicacion); // ← pasa el modo
         } else {
-            System.out.println("Falso positivo: Gravedad " + gravedad + " inferior al umbral.");
             return null;
         }
     }

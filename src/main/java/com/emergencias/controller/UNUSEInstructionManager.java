@@ -7,11 +7,11 @@ import java.io.File;
 import java.util.List;
 import java.util.Scanner;
 
-public class InstructionManager {
+public class UNUSEInstructionManager {
     private List<Instruction> instrucciones;
     private static final String RUTA_JSON = "src/main/java/resources/instrucciones.json";
 
-    public InstructionManager() {
+    public UNUSEInstructionManager() {
         cargarInstrucciones();
     }
     // cargador de JSON para su posterior consulta
