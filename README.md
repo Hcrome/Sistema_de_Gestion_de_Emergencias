@@ -25,32 +25,32 @@ Aplicación de escritorio desarrollada en **Java con JavaFX** que simula un sist
 
 ```
 src/main/
-├── java/com/emergencias/
-│   ├── main/
-│   │   └── Main.java                    ← Punto de entrada
-│   ├── controller/
-│   │   ├── MainMenuController.java      ← Navegación entre pantallas
-│   │   ├── UserDataController.java      ← Formulario de emergencia
-│   │   ├── EmergencyListController.java ← Pantalla de instrucciones
-│   │   ├── EmergencyLogController.java  ← Pantalla de resultado
-│   │   └── EmergencyManager.java        ← Orquestador del core
-│   ├── detector/
-│   │   └── EmergencyDetector.java       ← Lógica de validación y ubicación
-│   ├── alert/
-│   │   └── AlertSender.java             ← Simulación de envío al 112
-│   └── model/
-│       ├── EmergencyEvent.java          ← Modelo del evento (inmutable)
-│       ├── UserData.java                ← Datos personales del usuario
-│       ├── Hospital.java                ← Modelo hospital + Haversine
-│       ├── HospitalLoader.java          ← Lectura JSON de hospitales
-│       └── Instruction.java             ← Modelo de instrucción de emergencia
-└── resources/
-    ├── Main_menu.fxml
-    ├── user_data_form.fxml
-    ├── emergency_list.fxml
-    ├── emergency_log.fxml
-    ├── Hospital_list.json
-    └── instrucciones.json
+    java/com/emergencias/
+         main/
+            Main.java                    - Punto de entrada
+        controller/
+            MainMenuController.java      - Navegación entre pantallas
+            UserDataController.java      - Formulario de emergencia
+            EmergencyListController.java - Pantalla de instrucciones
+            EmergencyLogController.java  - Pantalla de resultado
+            EmergencyManager.java        - Orquestador del core
+        detector/
+            EmergencyDetector.java       - Lógica de validación y ubicación
+        alert/
+            AlertSender.java             - Simulación de envío al 112
+         model/
+            EmergencyEvent.java          - Modelo del evento (inmutable)
+            UserData.java                - Datos personales del usuario
+            Hospital.java                - Modelo hospital + Haversine
+            HospitalLoader.java          - Lectura JSON de hospitales
+            Instruction.java             - Modelo de instrucción de emergencia
+    resources/
+        Main_menu.fxml
+        user_data_form.fxml
+        emergency_list.fxml
+        emergency_log.fxml
+        Hospital_list.json
+        instrucciones.json
 ```
 
 ---
@@ -59,38 +59,38 @@ src/main/
 
 ```
 Main
- └── carga Main_menu.fxml
-      │
-      ├── [Botón: Instrucciones]
-      │    └── carga emergency_list.fxml
-      │         └── EmergencyListController.initialize()
-      │              └── lee instrucciones.json
-      │                   └── Jackson → List<Instruction> → TextArea
-      │
-      └── [Botón: Iniciar Emergencia]
-           └── carga user_data_form.fxml
-                └── UserDataController.initialize()
-                     ├── gestiona SplitMenuButton (físico ↔ coordenadas GPS)
-                     └── [Botón: Enviar] → enviarEmergencia()
-                          ├── recoge campos del formulario
-                          └── EmergencyManager.startSystem()
-                               └── EmergencyDetector.processFromGUI()
-                                    ├── [Modo GPS]
-                                    │    └── HospitalLoader.cargarDatos()
-                                    │         └── Jackson → List<Hospital>
-                                    │              └── encontrarMasCercano()
-                                    │                   └── Hospital.calcularDistanciaA()
-                                    │                        └── Fórmula Haversine
-                                    │
-                                    └── [Si gravedad ≥ umbral]
-                                         └── new EmergencyEvent(...)
-                                              └── asignarPrioridad() → ALTA / MEDIA / BAJA
-                                                   └── devuelve evento a EmergencyManager
-                                                        ├── AlertSender.sendAlert()
-                                                        │    ├── persiste en emergency_log.txt
-                                                        │    └── simula SMS al contacto
-                                                        └── guardarEnHistorial()
-                                                             └── persiste en historial_emergencias.txt
+      carga Main_menu.fxml
+     
+          [Botón: Instrucciones]
+              carga emergency_list.fxml
+                   EmergencyListController.initialize()
+                      lee instrucciones.json
+                          Jackson - List<Instruction> - TextArea
+    
+          [Botón: Iniciar Emergencia]
+               carga user_data_form.fxml
+                    UserDataController.initialize()
+                         gestiona SplitMenuButton (físico - coordenadas GPS)
+                         [Botón: Enviar] → enviarEmergencia()
+                              recoge campos del formulario
+                              EmergencyManager.startSystem()
+                                    EmergencyDetector.processFromGUI()
+                                        [Modo GPS]
+                                            HospitalLoader.cargarDatos()
+                                                Jackson → List<Hospital>
+                                                    encontrarMasCercano()
+                                                        Hospital.calcularDistanciaA()
+                                                             Fórmula Haversine
+                              
+                                        [Si gravedad ≥ umbral]
+                                             new EmergencyEvent(...)
+                                                   asignarPrioridad() → ALTA / MEDIA / BAJA
+                                                       devuelve evento a EmergencyManager
+                                                            AlertSender.sendAlert()
+                                                                persiste en emergency_log.txt
+                                                                simula SMS al contacto
+                                                            guardarEnHistorial()
+                                                                 persiste en historial_emergencias.txt
 ```
 
 ---
