@@ -19,7 +19,7 @@ public class EmergencyDetector {
         System.out.println("--- Procesando Emergencia desde GUI ---");
         String ubicacionFinal = "";
 
-        // Lógica de Ubicación (Copiada de tu gatherEventData)
+        // Lógica de Ubicación 
         if ("2".equals(modoUbicacion)) {
             System.out.println("DEBUG lat: '" + latStr + "' lon: '" + lonStr + "'");
             try {
