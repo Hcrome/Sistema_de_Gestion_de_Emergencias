@@ -26,9 +26,10 @@ public class EmergencyManager {
             sender.sendAlert(evento);
             guardarEnHistorial(evento);
         }
-        return evento; // ← devuelve el evento (o null si fue falso positivo)
+        return evento; //  devuelve el evento (o null si fue falso positivo)
     }
 
+   // registro añadido en practica de git hub por un compañero (duplicado)
     private void guardarEnHistorial(EmergencyEvent evento) {
         try (PrintWriter pw = new PrintWriter(new FileWriter("historial_emergencias.txt", true))) {
             pw.println("--- REGISTRO DE EMERGENCIA ---");
