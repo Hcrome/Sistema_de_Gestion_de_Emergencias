@@ -22,6 +22,7 @@ public class UserDataController {
     @FXML private HBox      panelCoordenadas;
     @FXML private SplitMenuButton splitUbicacion;
 
+    // logica del split menu de direcciones.
     @FXML
     public void initialize() {
         panelCoordenadas.setVisible(false);
