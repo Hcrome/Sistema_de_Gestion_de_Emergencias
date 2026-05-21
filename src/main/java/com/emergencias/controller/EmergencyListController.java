@@ -15,6 +15,8 @@ public class EmergencyListController {
 
     @FXML
     public void initialize() {
+
+        // Busca el json, deserializa los objetos y recorre la lista formando un texto que se vuelca en textarea.
         try {
             ObjectMapper mapper = new ObjectMapper();
             File jsonFile = new File("src/main/resources/instrucciones.json");
