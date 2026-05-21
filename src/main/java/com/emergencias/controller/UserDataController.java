@@ -1,6 +1,6 @@
 package main.java.com.emergencias.controller;
 
-import javafx.event.ActionEvent;        // ✅ JavaFX, no AWT
+import javafx.event.ActionEvent;       
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
