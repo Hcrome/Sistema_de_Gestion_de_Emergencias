@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * Clase para empaquetar y "enviar" la alerta (Core 2).
+ * Clase para empaquetar y "enviar" la alerta.
  * Persistencia simple en archivo de log.
  */
 public class AlertSender {
@@ -32,7 +32,7 @@ public class AlertSender {
         String paqueteDeDatos = event.toString();
 
         // Simulación de contacto y persistencia
-        System.out.println("\n*** ENVIANDO ALERTA CORE 2 ***");
+        System.out.println("\n*** ENVIANDO ALERTA ***");
         System.out.println(String.format(">> SIMULACIÓN DE ENVÍO A DESTINO: %s <<", destinoAlerta));
         System.out.println("Paquete de Datos Empaquetado:\n" + paqueteDeDatos);
 
