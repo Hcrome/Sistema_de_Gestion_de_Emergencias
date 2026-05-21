@@ -29,7 +29,7 @@ public class EmergencyEvent {
 
     public String getModoUbicacion() { return modoUbicacion; }
 
-    // feature de emergency priority
+    // asigna prioridad en base al tipo de emergencia
     private String asignarPrioridad(String tipo) {
         String t = tipo.toLowerCase();
         if (t.contains("fuego") || t.contains("accidente") || t.contains("cardiaco")) return "ALTA";
